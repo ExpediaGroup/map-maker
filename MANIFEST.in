@@ -1,0 +1,2 @@
+include versioneer.py
+include map_maker/_version.py

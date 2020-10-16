@@ -1,0 +1,7 @@
+
+[run]
+omit =
+    # Remove CLI.
+    map_maker/cli.py
+    **/__init__.py
+    map_maker/_version.py

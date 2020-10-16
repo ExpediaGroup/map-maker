@@ -1,0 +1,12 @@
+name: map-maker
+channels:
+  - defaults
+dependencies:
+  - python=3.6
+  - pip:
+      - pytest
+      - pytest-cov
+      - sphinx
+      - sphinx_rtd_theme
+      - flake8
+      - black
