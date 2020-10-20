@@ -2,7 +2,7 @@
 
 Simple maps from the command line.
 
-![Build](https://github.com/ExpediaGroup/map-maker/workflows/Python%20package/badge.svg)
+![Build](https://github.com/ExpediaGroup/map-maker/workflows/Python%20package/badge.svg) [![Coverage Status](https://coveralls.io/repos/github/ExpediaGroup/map-maker/badge.svg?branch=main)](https://coveralls.io/github/ExpediaGroup/map-maker?branch=main)
 
 ## API Docs
 
