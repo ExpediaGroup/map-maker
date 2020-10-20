@@ -2,6 +2,8 @@
 
 Simple maps from the command line.
 
+![Build](https://github.com/ExpediaGroup/map-maker/workflows/Python%20package/badge.svg)
+
 ## API Docs
 
 [TODO]()
