@@ -222,3 +222,9 @@ make documentation
 `sphinx-docs` - Documentation.
 
 `MANIFEST.in / setup.cfg / versioneer.py` - For versioneer.
+
+# Legal
+
+This project is available under the [Apache 2.0 License](http://www.apache.org/licenses/LICENSE-2.0.html).
+
+Copyright 2020 Expedia, Inc.
