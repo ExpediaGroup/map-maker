@@ -5,7 +5,7 @@ name: Release Python Package
 
 on:
   release:
-    types: [released]
+    types: [published]
 
 jobs:
   deploy:
@@ -25,8 +25,7 @@ jobs:
     - name: Build and publish
       env:
         TWINE_USERNAME: __token__
-        TWINE_PASSWORD: ${{ secrets.TEST_PY_PI_TOKEN }}
-        TWINE_REPOSITORY_URL: testpypi
+        TWINE_PASSWORD: ${{ secrets.PY_PI_TOKEN }}
       run: |
         python setup.py sdist bdist_wheel
-        twine upload dist/*
+        twine upload --repository pypi dist/*
