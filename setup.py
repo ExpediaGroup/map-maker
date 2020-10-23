@@ -18,7 +18,7 @@ from setuptools import setup, find_packages
 import pathlib
 import versioneer
 
-HERE = pathlib.PATH(__file__).parent
+HERE = pathlib.Path(__file__).parent
 README = (HERE / "README.md").read_text()
 
 setup(
