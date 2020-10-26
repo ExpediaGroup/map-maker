@@ -15,7 +15,11 @@ limitations under the License.
 """
 
 from setuptools import setup, find_packages
+import pathlib
 import versioneer
+
+HERE = pathlib.Path(__file__).parent
+README = (HERE / "README.md").read_text()
 
 setup(
     name="map_maker",
@@ -32,4 +36,16 @@ setup(
     ],
     entry_points={"console_scripts": ["map_maker=map_maker.cli:cli"]},
     cmdclass=versioneer.get_cmdclass(),
+    long_description=README,
+    long_description_content_type="text/markdown",
+    url="https://github.com/ExpediaGroup/map-maker",
+    license="Apache 2.0",
+    classifiers=[
+        # From https://pypi.org/classifiers/
+        "Development Status :: 4 - Beta",
+        "License :: OSI Approved :: Apache Software License",
+        "Programming Language :: Python :: 3.6",
+        "Programming Language :: Python :: 3.7",
+        "Programming Language :: Python :: 3.8",
+    ],
 )
