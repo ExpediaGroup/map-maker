@@ -1,54 +1,57 @@
 
 
 <!DOCTYPE html>
-<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<html class="writer-html5" lang="en" >
 <head>
   <meta charset="utf-8">
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>map_maker (Bokeh) &mdash; map_maker 0.1 documentation</title>
+  <title>map_maker (Bokeh) &mdash; map_maker 1.4.1 documentation</title>
   
 
   
-  
-  
-  
-
-  
-
-  
-  
-    
-
-  
-
   <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+
+  
+  
+  
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="map_maker (Folium)" href="map_maker_folium.html" />
     <link rel="prev" title="Map Maker API Documentation" href="../index.html" /> 
-
-  
-  <script src="../_static/js/modernizr.min.js"></script>
-
 </head>
 
 <body class="wy-body-for-nav">
 
    
   <div class="wy-grid-for-nav">
-
     
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
-        <div class="wy-side-nav-search">
+        <div class="wy-side-nav-search" >
           
 
           
-            <a href="../index.html" class="icon icon-home"> map_maker
+            <a href="../index.html" class="icon icon-home" alt="Documentation Home"> map_maker
           
 
           
@@ -58,7 +61,7 @@
             
             
               <div class="version">
-                0.1
+                1.4.1
               </div>
             
           
@@ -75,6 +78,7 @@
           
         </div>
 
+        
         <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
           
             
@@ -85,7 +89,7 @@
               <ul class="current">
 <li class="toctree-l1 current"><a class="current reference internal" href="#">map_maker (Bokeh)</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#map-maker-bokeh-functions">map_maker.bokeh functions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#module-map_maker.bokeh.map_maker">Module contents</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-contents">Module contents</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="map_maker_folium.html">map_maker (Folium)</a></li>
@@ -94,6 +98,7 @@
             
           
         </div>
+        
       </div>
     </nav>
 
@@ -132,7 +137,7 @@
 
   <ul class="wy-breadcrumbs">
     
-      <li><a href="../index.html">Docs</a> &raquo;</li>
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
         
       <li>map_maker (Bokeh)</li>
     
@@ -158,94 +163,17 @@
 <p>These are the functions in the map_maker module.</p>
 <div class="section" id="map-maker-bokeh-functions">
 <h2>map_maker.bokeh functions<a class="headerlink" href="#map-maker-bokeh-functions" title="Permalink to this headline">¶</a></h2>
-<table border="1" class="longtable docutils">
+<table class="longtable docutils align-default">
 <colgroup>
-<col width="10%" />
-<col width="90%" />
+<col style="width: 10%" />
+<col style="width: 90%" />
 </colgroup>
-<tbody valign="top">
-<tr class="row-odd"><td><a class="reference internal" href="#map_maker.bokeh.map_maker.base_map_plot" title="map_maker.bokeh.map_maker.base_map_plot"><code class="xref py py-obj docutils literal notranslate"><span class="pre">base_map_plot</span></code></a>(x_range,&nbsp;y_range[,&nbsp;tools,&nbsp;…])</td>
-<td>Builds a blank map tile plot.</td>
-</tr>
-<tr class="row-even"><td><a class="reference internal" href="#map_maker.bokeh.map_maker.make_map_plot" title="map_maker.bokeh.map_maker.make_map_plot"><code class="xref py py-obj docutils literal notranslate"><span class="pre">make_map_plot</span></code></a>(map_data[,&nbsp;plot_height,&nbsp;…])</td>
-<td>Creates a Bokeh map from a list of dicts with geometry / style info.</td>
-</tr>
+<tbody>
 </tbody>
 </table>
 </div>
-<div class="section" id="module-map_maker.bokeh.map_maker">
-<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-map_maker.bokeh.map_maker" title="Permalink to this headline">¶</a></h2>
-<dl class="function">
-<dt id="map_maker.bokeh.map_maker.base_map_plot">
-<code class="descclassname">map_maker.bokeh.map_maker.</code><code class="descname">base_map_plot</code><span class="sig-paren">(</span><em>x_range</em>, <em>y_range</em>, <em>tools='pan</em>, <em>wheel_zoom</em>, <em>reset'</em>, <em>plot_height=800</em>, <em>plot_width=800</em>, <em>tiles=WMTSTileSource(id='1001'</em>, <em>...)</em><span class="sig-paren">)</span><a class="headerlink" href="#map_maker.bokeh.map_maker.base_map_plot" title="Permalink to this definition">¶</a></dt>
-<dd><p>Builds a blank map tile plot.</p>
-<p>Builds a blank figure with map tiles, but without axes, labels and ticks.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
-<li><strong>x_range</strong> (<code class="xref py py-obj docutils literal notranslate"><span class="pre">list</span></code> of float) – The minimum and maximum x coordinates for the plot.</li>
-<li><strong>y_range</strong> (<code class="xref py py-obj docutils literal notranslate"><span class="pre">list</span></code> of float) – The minimum and maximum y coordinates for the plot.</li>
-<li><strong>tools</strong> (<em>str</em>) – A comma separated list of strings defining the tools for the Bokeh
-plot widget.</li>
-<li><strong>plot_height</strong> (<em>float</em>) – The height of the plot in px.</li>
-<li><strong>plot_width</strong> (<em>float</em>) – The width of the plot in px.</li>
-<li><strong>tiles</strong> (<code class="xref py py-obj docutils literal notranslate"><span class="pre">bokeh.models.tiles.WMSTTileSource</span></code>) – The tile source for the blank map. Default is CartoDB Positron Retina.</li>
-</ul>
-</td>
-</tr>
-<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"><strong>fig</strong> – The Bokeh Figure for the blank map.</p>
-</td>
-</tr>
-<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bokeh.plotting.Figure</span></code></p>
-</td>
-</tr>
-</tbody>
-</table>
-</dd></dl>
-
-<dl class="function">
-<dt id="map_maker.bokeh.map_maker.make_map_plot">
-<code class="descclassname">map_maker.bokeh.map_maker.</code><code class="descname">make_map_plot</code><span class="sig-paren">(</span><em>map_data</em>, <em>plot_height=800</em>, <em>plot_width=800</em>, <em>tiles=WMTSTileSource(id='1002'</em>, <em>...)</em>, <em>point_size=2</em>, <em>polygon_line_width=2</em>, <em>linestring_width=2</em>, <em>tooltips={'points'}</em><span class="sig-paren">)</span><a class="headerlink" href="#map_maker.bokeh.map_maker.make_map_plot" title="Permalink to this definition">¶</a></dt>
-<dd><p>Creates a Bokeh map from a list of dicts with geometry / style info.</p>
-<p>Takes a list of dictionaries, each of which has the following fields:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
-    <span class="s2">&quot;shape&quot;</span><span class="p">:</span> <span class="c1"># WKT | GeoJSON String | Geo-Interface | Shapely Geometry</span>
-    <span class="s2">&quot;alpha&quot;</span><span class="p">:</span> <span class="c1"># Alpha value of the fill.</span>
-    <span class="s2">&quot;color&quot;</span><span class="p">:</span> <span class="c1"># Color of the shape</span>
-<span class="p">}</span>
-</pre></div>
-</div>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
-<li><strong>map_data</strong> (<code class="xref py py-obj docutils literal notranslate"><span class="pre">list</span></code> of <code class="xref py py-obj docutils literal notranslate"><span class="pre">dict</span></code>) – A list of dictionaries defining the shape and style to map with the
-fields defined above.</li>
-<li><strong>plot_height</strong> (<em>int</em>) – The height of the plot in px.</li>
-<li><strong>plot_width</strong> (<em>int</em>) – The width of the plot in px.</li>
-<li><strong>tiles</strong> (<code class="xref py py-obj docutils literal notranslate"><span class="pre">bokeh.models.tiles.WMSTTileSource</span></code>) – The tile source for the map. Default is CartoDB Positron Retina.</li>
-<li><strong>point_size</strong> (<em>float</em><em>, </em><em>default 2.</em>) – The size of the points to plot, if there are any points present.</li>
-<li><strong>polygon_line_width</strong> (<em>float</em><em>, </em><em>default 2.</em>) – The line width of the polygon outline, if there are any polygons
-present.  Set to 0 to disable polygon outlines.</li>
-<li><strong>linestring_width</strong> (<em>float</em><em>, </em><em>default 2.</em>) – The line width of the linestring, if there are any linestrings present.</li>
-<li><strong>tooltips</strong> (<em>set</em>) – The labels of tooltips to display, can be “points”, “linestrings”,
-“polygons” or both any combination.</li>
-</ul>
-</td>
-</tr>
-<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"><strong>fig</strong> – The Bokeh Figure for the map.</p>
-</td>
-</tr>
-<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bokeh.plotting.Figure</span></code></p>
-</td>
-</tr>
-</tbody>
-</table>
-</dd></dl>
-
+<div class="section" id="module-contents">
+<h2>Module contents<a class="headerlink" href="#module-contents" title="Permalink to this headline">¶</a></h2>
 </div>
 </div>
 
@@ -260,7 +188,7 @@ present.  Set to 0 to disable polygon outlines.</li>
         <a href="map_maker_folium.html" class="btn btn-neutral float-right" title="map_maker (Folium)" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="../index.html" class="btn btn-neutral" title="Map Maker API Documentation" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="../index.html" class="btn btn-neutral float-left" title="Map Maker API Documentation" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -269,11 +197,19 @@ present.  Set to 0 to disable polygon outlines.</li>
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2017, Expedia Inc
+        
+        &copy; Copyright 2020 Expedia, Inc.
 
     </p>
   </div>
-  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+    
+    
+    
+    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
 
 </footer>
 
@@ -285,26 +221,16 @@ present.  Set to 0 to disable polygon outlines.</li>
   </div>
   
 
-
-  
-
-    
-    
-      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
-        <script type="text/javascript" src="../_static/jquery.js"></script>
-        <script type="text/javascript" src="../_static/underscore.js"></script>
-        <script type="text/javascript" src="../_static/doctools.js"></script>
-    
-
-  
-
-  <script type="text/javascript" src="../_static/js/theme.js"></script>
-
   <script type="text/javascript">
       jQuery(function () {
           SphinxRtdTheme.Navigation.enable(true);
       });
-  </script> 
+  </script>
+
+  
+  
+    
+   
 
 </body>
 </html>
