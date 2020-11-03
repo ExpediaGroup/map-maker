@@ -6,7 +6,7 @@ Bokeh or Folium.
 
 This documentation is for module usage.
 See the README for command line usage:
-https://www.github.com/ExpediaGroup/map-maker
+https://github.com/ExpediaGroup/map-maker
 
 Contents
 ^^^^^^^^
