@@ -8,3 +8,4 @@ dist/
 .buildinfo
 scripts/*.html
 .coverage
+docs/
