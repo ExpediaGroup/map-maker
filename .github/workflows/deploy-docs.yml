@@ -1,0 +1,47 @@
+# This workflow builds and deploys Sphinx documentation to the gh-pages branch
+# It builds when a tag is _released_ (meaning not a prerelease).
+
+name: Build and Deploy Sphinx Docs
+
+
+on:
+  release:
+    types: [released]
+
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+# follows https://github.com/marketplace/actions/deploy-to-github-pages
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+      - uses: actions/checkout@v2
+        with:
+          persist-credentials: false
+
+      # Set up the python environment.
+      - name: Setup Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: '3.x'
+      
+      # Set up dependencies.
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install sphinx sphinx_rtd_theme
+
+      # Build the documentation
+      - name: Build Docs
+        run: |
+          make documentation
+      
+      # Use https://github.com/marketplace/actions/deploy-to-github-pages to deploy docs.
+      - name: Deploy Docs
+        uses: JamesIves/github-pages-deploy-action@3.7.1
+        with:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          BRANCH: gh-pages
+          FOLDER: docs/html
+          CLEAN: true
