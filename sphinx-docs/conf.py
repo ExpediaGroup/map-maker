@@ -56,7 +56,7 @@ master_doc = "index"
 
 # General information about the project.
 project = "map_maker"
-copyright = "2020, Expedia, Inc."
+copyright = "2020 Expedia, Inc."
 author = "Tim Renner"
 
 # The version info for the project you're documenting, acts as replacement for
