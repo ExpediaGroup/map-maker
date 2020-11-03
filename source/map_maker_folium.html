@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>map_maker (Folium) &mdash; map_maker 1.4.1 documentation</title>
+  <title>map_maker (Folium) &mdash; map_maker 1.4.3 documentation</title>
   
 
   
@@ -60,7 +60,7 @@
             
             
               <div class="version">
-                1.4.1
+                1.4.3
               </div>
             
           
@@ -89,7 +89,7 @@
 <li class="toctree-l1"><a class="reference internal" href="map_maker_bokeh.html">map_maker (Bokeh)</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">map_maker (Folium)</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#map-maker-folium-functions">map_maker.folium functions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#module-contents">Module contents</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-map_maker.folium.map_maker">Module contents</a></li>
 </ul>
 </li>
 </ul>
@@ -168,11 +168,63 @@
 <col style="width: 90%" />
 </colgroup>
 <tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#map_maker.folium.map_maker.make_map_plot" title="map_maker.folium.map_maker.make_map_plot"><code class="xref py py-obj docutils literal notranslate"><span class="pre">make_map_plot</span></code></a>(map_data[, plot_height, …])</p></td>
+<td><p>Creates a Folium map from a list of dicts with geometry / style info.</p></td>
+</tr>
 </tbody>
 </table>
 </div>
-<div class="section" id="module-contents">
-<h2>Module contents<a class="headerlink" href="#module-contents" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="module-map_maker.folium.map_maker">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-map_maker.folium.map_maker" title="Permalink to this headline">¶</a></h2>
+<p>Copyright 2020 Expedia, Inc.</p>
+<p>Licensed under the Apache License, Version 2.0 (the “License”);
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at</p>
+<blockquote>
+<div><p><a class="reference external" href="https://www.apache.org/licenses/LICENSE-2.0">https://www.apache.org/licenses/LICENSE-2.0</a></p>
+</div></blockquote>
+<p>Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an “AS IS” BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.</p>
+<dl class="py function">
+<dt id="map_maker.folium.map_maker.make_map_plot">
+<code class="sig-prename descclassname">map_maker.folium.map_maker.</code><code class="sig-name descname">make_map_plot</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">map_data</span></em>, <em class="sig-param"><span class="n">plot_height</span><span class="o">=</span><span class="default_value">800</span></em>, <em class="sig-param"><span class="n">plot_width</span><span class="o">=</span><span class="default_value">800</span></em>, <em class="sig-param"><span class="n">tiles</span><span class="o">=</span><span class="default_value">'cartodbpositron'</span></em>, <em class="sig-param"><span class="n">point_size</span><span class="o">=</span><span class="default_value">2</span></em>, <em class="sig-param"><span class="n">polygon_line_width</span><span class="o">=</span><span class="default_value">2</span></em>, <em class="sig-param"><span class="n">linestring_width</span><span class="o">=</span><span class="default_value">2</span></em>, <em class="sig-param"><span class="n">tooltips</span><span class="o">=</span><span class="default_value">{'points'}</span></em><span class="sig-paren">)</span><a class="headerlink" href="#map_maker.folium.map_maker.make_map_plot" title="Permalink to this definition">¶</a></dt>
+<dd><p>Creates a Folium map from a list of dicts with geometry / style info.</p>
+<p>Takes a list of dictionaries, each of which has the following fields:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+    <span class="s2">&quot;shape&quot;</span><span class="p">:</span> <span class="c1"># WKT | GeoJSON String | Geo-Interface | Shapely Geometry</span>
+    <span class="s2">&quot;alpha&quot;</span><span class="p">:</span> <span class="c1"># Alpha value of the fill.</span>
+    <span class="s2">&quot;color&quot;</span><span class="p">:</span> <span class="c1"># Color of the shape</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>map_data</strong> (<code class="xref py py-obj docutils literal notranslate"><span class="pre">list</span></code> of <code class="xref py py-obj docutils literal notranslate"><span class="pre">dict</span></code>) – A list of dictionaries defining the shape and style to map with the
+fields defined above.</p></li>
+<li><p><strong>plot_height</strong> (<em>int</em>) – The height of the plot in px.</p></li>
+<li><p><strong>plot_width</strong> (<em>int</em>) – The width of the plot in px.</p></li>
+<li><p><strong>tiles</strong> (<em>str</em>) – The tile source for the map. Default is CartoDB Positron.</p></li>
+<li><p><strong>point_size</strong> (<em>float</em><em>, </em><em>default 2.</em>) – The size of the points to plot, if there are any points present.</p></li>
+<li><p><strong>polygon_line_width</strong> (<em>float</em><em>, </em><em>default 2.</em>) – The line width of the polygon outline, if there are any polygons
+present.  Set to 0 to disable polygon outlines.</p></li>
+<li><p><strong>linestring_width</strong> (<em>float</em><em>, </em><em>default 2.</em>) – The line with of the linestring, if there are any linestrings present.</p></li>
+<li><p><strong>tooltips</strong> (<em>set</em>) – The labels of tooltips to display, can be “points”, “linestrings”,
+“polygons” or any combination of those.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>fig</strong> – The Folium object for the map.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">folium.Map</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
 </div>
 </div>
 

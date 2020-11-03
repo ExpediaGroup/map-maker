@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>map_maker (Bokeh) &mdash; map_maker 1.4.1 documentation</title>
+  <title>map_maker (Bokeh) &mdash; map_maker 1.4.3 documentation</title>
   
 
   
@@ -61,7 +61,7 @@
             
             
               <div class="version">
-                1.4.1
+                1.4.3
               </div>
             
           
@@ -89,7 +89,7 @@
               <ul class="current">
 <li class="toctree-l1 current"><a class="current reference internal" href="#">map_maker (Bokeh)</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#map-maker-bokeh-functions">map_maker.bokeh functions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#module-contents">Module contents</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-map_maker.bokeh.map_maker">Module contents</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="map_maker_folium.html">map_maker (Folium)</a></li>
@@ -169,11 +169,92 @@
 <col style="width: 90%" />
 </colgroup>
 <tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#map_maker.bokeh.map_maker.base_map_plot" title="map_maker.bokeh.map_maker.base_map_plot"><code class="xref py py-obj docutils literal notranslate"><span class="pre">base_map_plot</span></code></a>(x_range, y_range[, tools, …])</p></td>
+<td><p>Builds a blank map tile plot.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#map_maker.bokeh.map_maker.make_map_plot" title="map_maker.bokeh.map_maker.make_map_plot"><code class="xref py py-obj docutils literal notranslate"><span class="pre">make_map_plot</span></code></a>(map_data[, plot_height, …])</p></td>
+<td><p>Creates a Bokeh map from a list of dicts with geometry / style info.</p></td>
+</tr>
 </tbody>
 </table>
 </div>
-<div class="section" id="module-contents">
-<h2>Module contents<a class="headerlink" href="#module-contents" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="module-map_maker.bokeh.map_maker">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-map_maker.bokeh.map_maker" title="Permalink to this headline">¶</a></h2>
+<p>Copyright 2020 Expedia, Inc.</p>
+<p>Licensed under the Apache License, Version 2.0 (the “License”);
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at</p>
+<blockquote>
+<div><p><a class="reference external" href="https://www.apache.org/licenses/LICENSE-2.0">https://www.apache.org/licenses/LICENSE-2.0</a></p>
+</div></blockquote>
+<p>Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an “AS IS” BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.</p>
+<dl class="py function">
+<dt id="map_maker.bokeh.map_maker.base_map_plot">
+<code class="sig-prename descclassname">map_maker.bokeh.map_maker.</code><code class="sig-name descname">base_map_plot</code><span class="sig-paren">(</span><em class="sig-param">x_range</em>, <em class="sig-param">y_range</em>, <em class="sig-param">tools='pan</em>, <em class="sig-param">wheel_zoom</em>, <em class="sig-param">reset'</em>, <em class="sig-param">plot_height=800</em>, <em class="sig-param">plot_width=800</em>, <em class="sig-param">tiles=WMTSTileSource(id='1001'</em>, <em class="sig-param">...)</em><span class="sig-paren">)</span><a class="headerlink" href="#map_maker.bokeh.map_maker.base_map_plot" title="Permalink to this definition">¶</a></dt>
+<dd><p>Builds a blank map tile plot.</p>
+<p>Builds a blank figure with map tiles, but without axes, labels and ticks.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>x_range</strong> (<code class="xref py py-obj docutils literal notranslate"><span class="pre">list</span></code> of float) – The minimum and maximum x coordinates for the plot.</p></li>
+<li><p><strong>y_range</strong> (<code class="xref py py-obj docutils literal notranslate"><span class="pre">list</span></code> of float) – The minimum and maximum y coordinates for the plot.</p></li>
+<li><p><strong>tools</strong> (<em>str</em>) – A comma separated list of strings defining the tools for the Bokeh
+plot widget.</p></li>
+<li><p><strong>plot_height</strong> (<em>float</em>) – The height of the plot in px.</p></li>
+<li><p><strong>plot_width</strong> (<em>float</em>) – The width of the plot in px.</p></li>
+<li><p><strong>tiles</strong> (<code class="xref py py-obj docutils literal notranslate"><span class="pre">bokeh.models.tiles.WMSTTileSource</span></code>) – The tile source for the blank map. Default is CartoDB Positron Retina.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>fig</strong> – The Bokeh Figure for the blank map.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">bokeh.plotting.Figure</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="map_maker.bokeh.map_maker.make_map_plot">
+<code class="sig-prename descclassname">map_maker.bokeh.map_maker.</code><code class="sig-name descname">make_map_plot</code><span class="sig-paren">(</span><em class="sig-param">map_data</em>, <em class="sig-param">plot_height=800</em>, <em class="sig-param">plot_width=800</em>, <em class="sig-param">tiles=WMTSTileSource(id='1002'</em>, <em class="sig-param">...)</em>, <em class="sig-param">point_size=2</em>, <em class="sig-param">polygon_line_width=2</em>, <em class="sig-param">linestring_width=2</em>, <em class="sig-param">tooltips={'points'}</em><span class="sig-paren">)</span><a class="headerlink" href="#map_maker.bokeh.map_maker.make_map_plot" title="Permalink to this definition">¶</a></dt>
+<dd><p>Creates a Bokeh map from a list of dicts with geometry / style info.</p>
+<p>Takes a list of dictionaries, each of which has the following fields:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+    <span class="s2">&quot;shape&quot;</span><span class="p">:</span> <span class="c1"># WKT | GeoJSON String | Geo-Interface | Shapely Geometry</span>
+    <span class="s2">&quot;alpha&quot;</span><span class="p">:</span> <span class="c1"># Alpha value of the fill.</span>
+    <span class="s2">&quot;color&quot;</span><span class="p">:</span> <span class="c1"># Color of the shape</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>map_data</strong> (<code class="xref py py-obj docutils literal notranslate"><span class="pre">list</span></code> of <code class="xref py py-obj docutils literal notranslate"><span class="pre">dict</span></code>) – A list of dictionaries defining the shape and style to map with the
+fields defined above.</p></li>
+<li><p><strong>plot_height</strong> (<em>int</em>) – The height of the plot in px.</p></li>
+<li><p><strong>plot_width</strong> (<em>int</em>) – The width of the plot in px.</p></li>
+<li><p><strong>tiles</strong> (<code class="xref py py-obj docutils literal notranslate"><span class="pre">bokeh.models.tiles.WMSTTileSource</span></code>) – The tile source for the map. Default is CartoDB Positron Retina.</p></li>
+<li><p><strong>point_size</strong> (<em>float</em><em>, </em><em>default 2.</em>) – The size of the points to plot, if there are any points present.</p></li>
+<li><p><strong>polygon_line_width</strong> (<em>float</em><em>, </em><em>default 2.</em>) – The line width of the polygon outline, if there are any polygons
+present.  Set to 0 to disable polygon outlines.</p></li>
+<li><p><strong>linestring_width</strong> (<em>float</em><em>, </em><em>default 2.</em>) – The line width of the linestring, if there are any linestrings present.</p></li>
+<li><p><strong>tooltips</strong> (<em>set</em>) – The labels of tooltips to display, can be “points”, “linestrings”,
+“polygons” or both any combination.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>fig</strong> – The Bokeh Figure for the map.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">bokeh.plotting.Figure</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
 </div>
 </div>
 
