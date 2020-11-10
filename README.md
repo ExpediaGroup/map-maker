@@ -157,6 +157,8 @@ def make_map_plot(
 )
 ```
 
+To see more detailed examples, check the `notebooks/` directory.
+
 ## Development
 
 ### Environment Setup
@@ -222,6 +224,8 @@ make documentation
 `sphinx-docs` - Documentation.
 
 `MANIFEST.in / setup.cfg / versioneer.py` - For versioneer.
+
+`notebooks` - Example notebooks.
 
 # Legal
 

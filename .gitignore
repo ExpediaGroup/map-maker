@@ -9,3 +9,4 @@ dist/
 scripts/*.html
 .coverage
 docs/
+.ipynb_checkpoints
